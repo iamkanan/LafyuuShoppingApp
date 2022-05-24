@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="@color/purple_700"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/homePageSliderImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/ic_launcher_background" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/homePageSliderTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Super Flash Sale\n50% Off" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/homePageSliderTime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/slider_text_shape"
+                android:padding="10dp"
+                android:textColor="@color/neutralDark"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@id/homePageSliderTitle"
+                app:layout_constraintTop_toBottomOf="@id/homePageSliderTitle"
+                tools:text="08" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/doublePoint1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/homePageSliderTime1"
+                app:layout_constraintStart_toEndOf="@id/homePageSliderTime1"
+                app:layout_constraintTop_toTopOf="@id/homePageSliderTime1"
+                app:srcCompat="@drawable/ic_dot" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/homePageSliderTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:background="@drawable/slider_text_shape"
+                android:padding="10dp"
+                android:textColor="@color/neutralDark"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@id/doublePoint1"
+                app:layout_constraintTop_toBottomOf="@id/homePageSliderTitle"
+                tools:text="34" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/doublePoint2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/homePageSliderTime1"
+                app:layout_constraintStart_toEndOf="@id/homePageSliderTime2"
+                app:layout_constraintTop_toTopOf="@id/homePageSliderTime1"
+                app:srcCompat="@drawable/ic_dot" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/homePageSliderTime3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/slider_text_shape"
+                android:padding="10dp"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:textColor="@color/neutralDark"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@id/doublePoint2"
+                app:layout_constraintTop_toBottomOf="@id/homePageSliderTitle"
+                tools:text="52" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
