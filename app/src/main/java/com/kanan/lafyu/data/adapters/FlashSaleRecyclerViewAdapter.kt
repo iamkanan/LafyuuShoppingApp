@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
-import com.kanan.lafyu.data.models.response.Product
+import com.kanan.lafyu.data.models.homeResponse.Product
 import com.kanan.lafyu.databinding.FlashsaleListItemBinding
 class FlashSaleRecyclerViewAdapter: RecyclerView.Adapter<FlashSaleRecyclerViewAdapter.FlashVH>() {
 
@@ -20,7 +20,7 @@ class FlashSaleRecyclerViewAdapter: RecyclerView.Adapter<FlashSaleRecyclerViewAd
     inner class FlashVH(private val flashBinding: FlashsaleListItemBinding): RecyclerView.ViewHolder(flashBinding.root) {
         fun bind(model: Product) {
             flashBinding.apply {
-                saleImage.load(model.images?.get(0)) {
+                saleImage.load(model.thumbnailImage) {
                     crossfade(true)
                     transformations(RoundedCornersTransformation(50f,50f,50f,50f))
                 }

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.kanan.lafyu.R
 
 
-class ExploreFragment : Fragment() {
+class ExploreFragment() : Fragment() {
 
 
     override fun onCreateView(

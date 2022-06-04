@@ -26,6 +26,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/bottom_nav_icon_tint_selector"
+        app:itemIconTint="@color/bottom_nav_icon_tint_selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

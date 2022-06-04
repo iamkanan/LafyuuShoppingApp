@@ -2,8 +2,8 @@ package com.kanan.lafyu.ui.auth.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kanan.lafyu.data.models.response.LoginResponseModel
-import com.kanan.lafyu.data.models.response.RegisterResponseModel
+import com.kanan.lafyu.data.models.authResponse.LoginResponseModel
+import com.kanan.lafyu.data.models.authResponse.RegisterResponseModel
 import com.kanan.lafyu.data.repository.AuthRepository
 import com.kanan.lafyu.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel

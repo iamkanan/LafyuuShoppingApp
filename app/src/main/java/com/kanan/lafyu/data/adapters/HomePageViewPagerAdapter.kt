@@ -8,7 +8,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.viewpager.widget.PagerAdapter
 import coil.load
 import com.kanan.lafyu.R
-import com.kanan.lafyu.data.models.response.Advertisment
+import com.kanan.lafyu.data.models.homeResponse.Advertisment
 
 class HomePageViewPagerAdapter(): PagerAdapter() {
 

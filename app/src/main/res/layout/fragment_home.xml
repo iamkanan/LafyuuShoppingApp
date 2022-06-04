@@ -113,7 +113,6 @@
                 app:layout_constraintTop_toBottomOf="@id/categoryText"
                 tools:listitem="@layout/category_list_item" />
 
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/flashSaleText"
                 android:layout_width="wrap_content"

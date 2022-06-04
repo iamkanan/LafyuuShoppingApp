@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
-import com.kanan.lafyu.data.models.response.Product
+import com.kanan.lafyu.data.models.homeResponse.Product
 import com.kanan.lafyu.databinding.MegasaleListItemBinding
 
 class MegaSaleRecyclerViewAdapter : RecyclerView.Adapter<MegaSaleRecyclerViewAdapter.MegaVH>() {
@@ -22,7 +22,7 @@ class MegaSaleRecyclerViewAdapter : RecyclerView.Adapter<MegaSaleRecyclerViewAda
         RecyclerView.ViewHolder(megaBinding.root) {
         fun bind(model: Product) {
             megaBinding.apply {
-                megaImage.load(model.images?.get(1)) {
+                megaImage.load(model.thumbnailImage) {
                     crossfade(true)
                     transformations(RoundedCornersTransformation(50f, 50f, 50f, 50f))
                 }

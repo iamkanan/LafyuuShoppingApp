@@ -1,10 +1,10 @@
 package com.kanan.lafyu.data.repository
 
 import com.kanan.lafyu.data.remote.API
-import com.kanan.lafyu.data.models.request.LoginRequestModel
-import com.kanan.lafyu.data.models.request.RegisterRequestModel
-import com.kanan.lafyu.data.models.response.LoginResponseModel
-import com.kanan.lafyu.data.models.response.RegisterResponseModel
+import com.kanan.lafyu.data.models.authRequest.LoginRequestModel
+import com.kanan.lafyu.data.models.authRequest.RegisterRequestModel
+import com.kanan.lafyu.data.models.authResponse.LoginResponseModel
+import com.kanan.lafyu.data.models.authResponse.RegisterResponseModel
 import com.kanan.lafyu.utils.Resource
 import retrofit2.HttpException
 import java.io.IOException

@@ -1,10 +1,13 @@
 package com.kanan.lafyu.data.remote
 
-import com.kanan.lafyu.data.models.request.LoginRequestModel
-import com.kanan.lafyu.data.models.request.RegisterRequestModel
-import com.kanan.lafyu.data.models.response.HomePageResponse
-import com.kanan.lafyu.data.models.response.LoginResponseModel
-import com.kanan.lafyu.data.models.response.RegisterResponseModel
+import com.kanan.lafyu.data.models.authRequest.LoginRequestModel
+import com.kanan.lafyu.data.models.authRequest.RegisterRequestModel
+import com.kanan.lafyu.data.models.homeResponse.HomePageResponse
+import com.kanan.lafyu.data.models.authResponse.LoginResponseModel
+import com.kanan.lafyu.data.models.authResponse.RegisterResponseModel
+import com.kanan.lafyu.data.models.detailResponse.DetailResponseModel
+import com.kanan.lafyu.data.models.offerResponse.OfferResponseModel
+import com.kanan.lafyu.data.models.reviewResponse.ReviewResponseModel
 import retrofit2.http.*
 
 interface API {
@@ -25,8 +28,21 @@ interface API {
     ): HomePageResponse
 
     @GET("product-detail/{pId}")
-    suspend fun productDeatil(
+    suspend fun productDetail(
         @Header("Authorization") token: String,
         @Path("pId")productId: Int
-    ): HomePageResponse
+    ): DetailResponseModel
+
+    @GET("offer-screen/{id}")
+    suspend fun offer(
+        @Header("Authorization") token: String,
+        @Path("id")id: Int
+    ): OfferResponseModel
+
+    @GET("reviews/{id}")
+    suspend fun review(
+        @Header("Authorization") token: String,
+        @Path("id")id: Int
+    ): ReviewResponseModel
+
 }

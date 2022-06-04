@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.kanan.lafyu.data.models.response.Category
+import com.kanan.lafyu.data.models.homeResponse.Category
 import com.kanan.lafyu.databinding.CategoryListItemBinding
 
 

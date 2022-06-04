@@ -1,4 +1,4 @@
-package com.kanan.lafyu.data.models.response
+package com.kanan.lafyu.data.models.homeResponse
 
 data class Item(
     val advertismentId: Int? = null,

@@ -1,7 +1,7 @@
 package com.kanan.lafyu.data.repository
 
 import com.kanan.lafyu.data.remote.API
-import com.kanan.lafyu.data.models.response.HomePageResponse
+import com.kanan.lafyu.data.models.homeResponse.HomePageResponse
 import com.kanan.lafyu.utils.Resource
 import retrofit2.HttpException
 import java.io.IOException

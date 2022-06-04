@@ -1,6 +1,4 @@
 package com.kanan.lafyu.ui.auth.login
-import android.content.Context
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
@@ -15,11 +13,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.kanan.lafyu.R
-import com.kanan.lafyu.data.models.response.LoginResponseModel
+import com.kanan.lafyu.data.models.authResponse.LoginResponseModel
 import com.kanan.lafyu.data.repository.UserDataRepository
 import com.kanan.lafyu.databinding.FragmentLoginBinding
 import com.kanan.lafyu.ui.auth.viewmodel.AuthViewModel
-import com.kanan.lafyu.utils.Constants
 import com.kanan.lafyu.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -32,8 +29,6 @@ class LoginFragment : Fragment() {
 
     @Inject
     lateinit var userDataRepository: UserDataRepository
-
-
     private val authViewModel: AuthViewModel by activityViewModels()
     private lateinit var loginBinding: FragmentLoginBinding
 

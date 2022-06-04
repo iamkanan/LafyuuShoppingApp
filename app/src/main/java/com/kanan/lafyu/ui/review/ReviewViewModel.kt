@@ -1,9 +1,10 @@
-package com.kanan.lafyu.ui.main
+package com.kanan.lafyu.ui.review
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kanan.lafyu.data.models.response.HomePageResponse
-import com.kanan.lafyu.data.repository.HomeRepository
+import com.kanan.lafyu.data.models.reviewResponse.ReviewResponseModel
+import com.kanan.lafyu.data.repository.ReviewRepository
 import com.kanan.lafyu.data.repository.UserDataRepository
 import com.kanan.lafyu.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,24 +15,26 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
-    private val homeRepository: HomeRepository,
+class ReviewViewModel @Inject constructor(
+    private val reviewRepository: ReviewRepository,
     private val userDataRepository: UserDataRepository
 ) : ViewModel() {
 
-    init {
-        userDataRepository.getToken()?.let { getHomePage(it) }
-    }
-
-    private val _data = MutableStateFlow<Resource<HomePageResponse>?>(null)
+    private val _data = MutableStateFlow<Resource<ReviewResponseModel>?>(null)
     val data = _data.asStateFlow()
 
-    private fun getHomePage(token: String) {
+
+    fun getReviewPage(id: Int = 1) {
         viewModelScope.launch(Dispatchers.IO) {
             _data.emit(Resource.Loading)
-            val response = homeRepository.getHomePage(token)
-            _data.emit(response)
+
+            userDataRepository.getToken()?.let {
+                val response = reviewRepository.getReviewPage(it, id)
+                _data.emit(response)
+            }
 
         }
     }
+
+
 }
