@@ -85,7 +85,7 @@ class OfferFragment() : Fragment() {
                             transformations(RoundedCornersTransformation(px, px, px, px))
                         }
                         offerBinding.offerTitle.text = it.data.title
-                        offerAdapter.setList(it.data.products)
+                        it.data.products?.let { it1 -> offerAdapter.setList(it1) }
                     }
                 }
             }

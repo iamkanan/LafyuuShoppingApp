@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bgColor"
+    tools:context=".ui.notification.NotificationFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/notificationToolbar"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navigationIcon="@drawable/ic_left"
+        app:title="Notification"
+        app:titleTextColor="@color/neutralDark"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/neutralLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notificationToolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationOffer"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintEnd_toStartOf="@id/mark2"
+        android:padding="16dp"
+        android:layout_marginEnd="10dp"
+        android:text="Offer"
+        android:drawableLeft="@drawable/ic_offer"
+        android:drawablePadding="16dp"
+        android:textColor="@color/neutralDark"
+        android:fontFamily="@font/poppins_bold"
+        android:includeFontPadding="false"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mark2"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_mark2"
+        app:layout_constraintTop_toTopOf="@id/notificationOffer"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintBottom_toBottomOf="@id/notificationOffer"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationFeed"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notificationOffer"
+        app:layout_constraintEnd_toStartOf="@id/mark3"
+        android:padding="16dp"
+        android:layout_marginEnd="10dp"
+        android:text="Feed"
+        android:drawableLeft="@drawable/ic_list"
+        android:drawablePadding="16dp"
+        android:textColor="@color/neutralDark"
+        android:fontFamily="@font/poppins_bold"
+        android:includeFontPadding="false"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mark3"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_mark3"
+        app:layout_constraintTop_toTopOf="@id/notificationFeed"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintBottom_toBottomOf="@id/notificationFeed"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationActivity"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notificationFeed"
+        app:layout_constraintEnd_toStartOf="@id/mark3b"
+        android:padding="16dp"
+        android:layout_marginEnd="10dp"
+        android:text="Activity"
+        android:drawableLeft="@drawable/ic_notification"
+        android:drawablePadding="16dp"
+        android:textColor="@color/neutralDark"
+        android:fontFamily="@font/poppins_bold"
+        android:includeFontPadding="false"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mark3b"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_mark3"
+        app:layout_constraintTop_toTopOf="@id/notificationActivity"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintBottom_toBottomOf="@id/notificationActivity"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

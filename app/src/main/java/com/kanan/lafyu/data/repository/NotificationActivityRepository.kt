@@ -1,26 +1,23 @@
 package com.kanan.lafyu.data.repository
 
-import android.util.Log
-import com.kanan.lafyu.data.models.reviewResponse.ReviewResponseModel
+import com.kanan.lafyu.data.models.notificationResponse.NotificationActivityResponseModel
 import com.kanan.lafyu.data.remote.API
 import com.kanan.lafyu.utils.Resource
 import retrofit2.HttpException
 import java.io.IOException
-import java.lang.Exception
 import java.net.UnknownHostException
+import java.util.*
 import javax.inject.Inject
 import javax.inject.Singleton
 
-
 @Singleton
-class ReviewRepository@Inject constructor(
-    private val api:API
-) {
+class NotificationActivityRepository@Inject constructor(
+    private val api: API
+){
 
-    suspend fun getReviewPage(token: String, id:Int): Resource<ReviewResponseModel> {
+    suspend fun getNotificationActivityPage(token: String): Resource<List<NotificationActivityResponseModel>> {
         try {
-            val response = api.review("Bearer $token", id)
-            Log.d("sassasa","success review")
+            val response = api.notificationActivity("Bearer $token")
             return Resource.Success(response)
         } catch (e: IOException) {
             Resource.Error("Internet connection not found")
@@ -33,6 +30,8 @@ class ReviewRepository@Inject constructor(
         }
         return Resource.Error("Something went wrong")
     }
+
+
 
 
 }

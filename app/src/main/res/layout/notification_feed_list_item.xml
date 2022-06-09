@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="16dp"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/notificationFeedImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/feed_image_background_shape"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationFeedTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/poppins_bold"
+        android:includeFontPadding="false"
+        android:text="New Product"
+        android:textColor="@color/neutralDark"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/notificationFeedImage"
+        app:layout_constraintTop_toTopOf="@id/notificationFeedImage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationFeedDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:includeFontPadding="false"
+        android:layout_marginTop="5dp"
+        android:text="Nike Air Zoom Pegasus 36 Miami - Special For your Activity"
+        android:textColor="@color/neutralGrey"
+        android:layout_marginEnd="16dp"
+        android:textSize="12sp"
+        android:maxWidth="300dp"
+        app:layout_constraintStart_toStartOf="@id/notificationFeedTitle"
+        app:layout_constraintTop_toBottomOf="@id/notificationFeedTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationFeedDate"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@id/notificationFeedTitle"
+        android:text="April 30, 2014 1:01 PM"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="10sp"
+        android:textColor="@color/neutralDark"
+        app:layout_constraintTop_toBottomOf="@id/notificationFeedDesc"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

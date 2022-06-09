@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/allCategoryListItemPic"
+        android:layout_width="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background"
+        android:layout_height="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/allCategoryListItemTitle"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@id/allCategoryListItemPic"
+        app:layout_constraintTop_toTopOf="@id/allCategoryListItemPic"
+        android:text="Work Equipment"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintBottom_toBottomOf="@id/allCategoryListItemPic"
+        android:textSize="12sp"
+        android:layout_marginStart="16dp"
+        android:includeFontPadding="false"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

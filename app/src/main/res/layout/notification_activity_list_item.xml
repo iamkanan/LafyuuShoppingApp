@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="16dp"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/notificationActivityIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_vector"
+        app:srcCompat="@drawable/ic_offer" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationActivityTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/poppins_bold"
+        android:includeFontPadding="false"
+        android:text="The Best Title"
+        android:textColor="@color/neutralDark"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/notificationActivityIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationActivityDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:includeFontPadding="false"
+        android:layout_marginTop="5dp"
+        android:text="Culpa cillum consectetur labore nulla nulla magna irure. Id veniam culpa officia aute dolor amet deserunt ex proident commodo"
+        android:textColor="@color/neutralGrey"
+        android:layout_marginEnd="16dp"
+        android:textSize="12sp"
+        android:maxWidth="300dp"
+        app:layout_constraintStart_toStartOf="@id/notificationActivityTitle"
+        app:layout_constraintTop_toBottomOf="@id/notificationActivityTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationActivityDate"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@id/notificationActivityTitle"
+        android:text="April 30, 2014 1:01 PM"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="10sp"
+        android:textColor="@color/neutralDark"
+        app:layout_constraintTop_toBottomOf="@id/notificationActivityDesc"
+        android:layout_height="wrap_content"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

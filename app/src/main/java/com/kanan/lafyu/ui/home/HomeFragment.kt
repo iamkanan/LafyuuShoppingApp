@@ -8,6 +8,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import androidx.navigation.Navigation.findNavController
 import coil.load
 import coil.transform.RoundedCornersTransformation
@@ -33,7 +34,7 @@ class HomeFragment : Fragment() {
     private val megaAdapter = MegaSaleRecyclerViewAdapter()
     private val recommendAdapter = RecommendRecyclerViewAdapter()
 
-    private var _binding: com.kanan.lafyu.databinding.FragmentHomeBinding? = null
+    private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
     private val homeViewModel: HomeViewModel by viewModels()
@@ -91,17 +92,36 @@ class HomeFragment : Fragment() {
                 navigateToOfferPage(1)
             }
             seeMoreMegaSale.setOnClickListener { navigateToOfferPage(2) }
-        }
+            moreCategoryText.setOnClickListener {
+                Navigation.findNavController(requireActivity(), R.id.fragmentContainerView)
+                    .navigate(R.id.action_to_categoryFragment)
+            }
 
+            mainToolbar.setOnMenuItemClickListener { item ->
+                when(item.itemId) {
+                    R.id.notification -> {
+                        Navigation.findNavController(requireActivity(), R.id.fragmentContainerView)
+                            .navigate(R.id.action_to_notificationFragment)
+                    }
+                }
+                true
+
+            }
+
+
+        }
 
 
     }
 
-    private fun navigateToOfferPage(type: Int){
+    private fun navigateToOfferPage(type: Int) {
         val bundle = bundleOf(
             Constants.OFFER_PAGE_TYPE to type
         )
-        findNavController(requireActivity(),R.id.fragmentContainerView).navigate(R.id.action_to_offerFragment,bundle)
+        findNavController(
+            requireActivity(),
+            R.id.fragmentContainerView
+        ).navigate(R.id.action_to_offerFragment, bundle)
     }
 
 
@@ -111,5 +131,6 @@ class HomeFragment : Fragment() {
         mAdapter = null
         super.onDestroyView()
     }
+
 
 }

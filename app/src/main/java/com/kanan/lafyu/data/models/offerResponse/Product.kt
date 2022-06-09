@@ -1,13 +1,13 @@
 package com.kanan.lafyu.data.models.offerResponse
 
 data class Product(
-    val discountPercent: Int,
-    val discountPrice: Double,
-    val images: List<String>,
-    val price: Double,
-    val productId: Int,
-    val rating: Double,
-    val specification: String,
-    val thumbnailImage: String,
-    val title: String
+    val discountPercent: Int ?= null,
+    val discountPrice: Double ?= null,
+    val images: List<String> ?= null,
+    val price: Double ?= null,
+    val productId: Int ?= null,
+    val rating: Double ?= null,
+    val specification: String ?= null,
+    val thumbnailImage: String ?= null,
+    val title: String ?= null
 )

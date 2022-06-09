@@ -18,4 +18,5 @@
     <color name="primaryYellow">#FFFF00</color>
     <color name="secondaryYellow">#FFC833</color>
     <color name="secondaryLightBlue">#ECF9FF</color>
+    <color name="imageBackgroundColor">#F6F6F6</color>
 </resources>

@@ -10,7 +10,9 @@ import java.io.IOException
 import java.lang.Exception
 import java.net.UnknownHostException
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class DetailRepository@Inject constructor(
     private val api: API
 ) {

@@ -21,6 +21,27 @@
         android:id="@+id/action_to_reviewFragment"
         app:destination="@+id/reviewFragment"/>
 
+    <action
+        android:id="@+id/action_to_categoryFragment"
+        app:destination="@+id/categoryFragment"/>
+
+    <action
+        android:id="@+id/action_to_notificationFragment"
+        app:destination="@+id/notificationFragment"/>
+
+    <action
+        android:id="@+id/action_to_notificationOfferFragment"
+        app:destination="@+id/notificationOfferFragment"/>
+
+    <action
+        android:id="@+id/action_to_notificationFeedFragment"
+        app:destination="@+id/notificationFeedFragment"/>
+
+    <action
+        android:id="@+id/action_to_notificationActivityFragment"
+        app:destination="@id/notificationActivityFragment" />
+
+
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.kanan.lafyu.ui.splash.SplashFragment"
@@ -75,6 +96,31 @@
         android:name="com.kanan.lafyu.ui.review.ReviewFragment"
         android:label="fragment_review"
         tools:layout="@layout/fragment_review" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.kanan.lafyu.ui.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.kanan.lafyu.ui.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/notificationOfferFragment"
+        android:name="com.kanan.lafyu.ui.notification.NotificationOfferFragment"
+        android:label="fragment_notification_offer"
+        tools:layout="@layout/fragment_notification_offer" />
+    <fragment
+        android:id="@+id/notificationFeedFragment"
+        android:name="com.kanan.lafyu.ui.notification.NotificationFeedFragment"
+        android:label="fragment_notification_feed"
+        tools:layout="@layout/fragment_notification_feed" />
+    <fragment
+        android:id="@+id/notificationActivityFragment"
+        android:name="com.kanan.lafyu.ui.notification.NotificationActivityFragment"
+        android:label="fragment_notification_activity"
+        tools:layout="@layout/fragment_notification_activity" />
 
 </navigation>
 
